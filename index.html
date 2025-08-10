@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Moumita Roy — Cloud Security Portfolio</title>
+  <meta name="description" content="Moumita Roy — Cloud Security Enthusiast. Cloud security, Linux, MongoDB, SSO, TLS." />
+  <link rel="icon" href="data:," />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    /* ---------- Reset & Base ---------- */
+    :root{
+      --brand:#007acc;
+      --accent:#ff7b54;
+      --bg:#f4f8fb;
+      --card:#ffffff;
+      --muted:#586169;
+      --max-w:1000px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:#0f1720;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+    }
+    a{color:inherit}
+
+    /* ---------- Layout ---------- */
+    .wrap{max-width:var(--max-w);margin:32px auto;padding:0 20px;}
+    header.site-header{
+      background:linear-gradient(90deg,var(--brand), #0b6fbf);
+      color:#fff;
+      padding:18px 0;
+      border-radius:10px;
+      box-shadow:0 8px 24px rgba(3,64,120,0.12);
+      margin-bottom:20px;
+    }
+    .site-header .brand{
+      max-width:var(--max-w);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:0 20px;
+    }
+    .brand h1{margin:0;font-size:20px;letter-spacing:0.2px}
+    .nav{
+      display:flex;
+      gap:10px;
+    }
+    .nav-btn{
+      background:#fff;
+      color:var(--brand);
+      border:0;padding:8px 12px;border-radius:18px;font-weight:600;cursor:pointer;
+      box-shadow:0 1px 0 rgba(0,0,0,0.06);
+    }
+    .nav-btn:hover{opacity:.95}
+
+    /* ---------- Hero ---------- */
+    .hero{
+      background:var(--card);
+      border-radius:10px;
+      padding:28px;
+      display:flex;
+      gap:28px;
+      align-items:center;
+      box-shadow:0 6px 18px rgba(15,23,32,0.06);
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+    .hero .left{flex:1 1 360px;min-width:260px}
+    .hero .right{width:200px;flex:0 0 200px;display:flex;justify-content:center}
+    .hero-title{font-size:1.5rem;margin:0 0 8px 0;font-weight:700}
+    .hero-sub{margin:0 0 16px 0;color:var(--muted)}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn-primary{
+      background:var(--accent);
+      color:#fff;padding:10px 16px;border-radius:20px;text-decoration:none;font-weight:700;
+      display:inline-block;
+    }
+    .btn-ghost{
+      background:transparent;border:1px solid rgba(15,23,32,0.06);padding:10px 16px;border-radius:20px;color:var(--brand);
+    }
+
+    /* ---------- Sections ---------- */
+    .sections{margin-top:20px;display:grid;grid-template-columns:1fr 320px;gap:20px}
+    @media (max-width:880px){.sections{grid-template-columns:1fr}}
+    .card{background:var(--card);padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,32,0.04)}
+    h2.section-title{margin:0 0 12px 0;color:var(--brand);font-size:1.05rem}
+    p.lead{color:var(--muted);margin:0 0 12px 0}
+
+    /* ---------- Skills ---------- */
+    .skills-list{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#f1f7fb;color:var(--brand);padding:8px 12px;border-radius:999px;font-weight:600;font-size:0.95rem}
+    .skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.skills-list li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.icon-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.icon-grid i {
+  font-size: 2rem;
+  color: #007acc;
+  transition: transform 0.2s ease;
+}
+
+.icon-grid i:hover {
+  transform: scale(1.2);
+  color: #005b99;
+}
+    /* ---------- Experience ---------- */
+    .exp-item{margin-bottom:14px}
+    .exp-role{font-weight:700}
+    .exp-meta{font-size:0.9rem;color:var(--muted);margin-bottom:6px}
+    .exp-bullets{margin:8px 0 0 16px;padding:0}
+
+    /* ---------- Right Column (summary/contact) ---------- */
+    .profile-compact{display:flex;flex-direction:column;align-items:center;gap:12px}
+    .profile-pic{
+      width:140px;height:140px;border-radius:50%;object-fit:cover;border:4px solid #fff;
+      box-shadow:0 8px 20px rgba(3,64,120,0.12)
+    }
+    .contact-list{width:100%}
+    .contact-item{display:flex;gap:8px;align-items:center;padding:8px 12px;border-radius:8px;background:#fcfeff;border:1px solid rgba(3,64,120,0.04);margin-bottom:8px}
+    .contact-item a{font-weight:600;color:var(--brand);text-decoration:none}
+
+    /* ---------- Footer ---------- */
+    footer{margin-top:22px;text-align:center;color:var(--muted);font-size:0.9rem}
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <h1>Hello! Welcome to my page :)</h1>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="left">
+        <h2 id="hero-heading" class="hero-title">
+  Open to Hire — Cloud Security Enthusiast
+</h2>
+<p class="hero-sub">
+  Experienced in Linux systems administration and MongoDB Atlas performance and security operations. 
+  Currently focused on building hands-on security projects in AWS, identity management, encryption, and network protection.
+  In parallel also working on to get my certifications on AWS solutions architect(associate) and Comptia Security+;
+  Actively looking for opportunities to apply my skills and grow in the Cloud Security domain.
+</p>
+
+
+      <div class="cta-row" style="margin-top:12px">
+        </div>
+      </div>
+
+      <div class="right">
+        <!-- Put your profilepic.jpeg in same folder or use an S3 image link -->
+        <img class="profile-pic" src="profilepic.jpeg" alt="Moumita Roy — profile photo" />
+      </div>
+    </section>
+
+    <!-- Content Sections -->
+    <div class="sections" aria-live="polite">
+      <!-- Main column -->
+      <div>
+        <section id="tools" class="section" aria-labelledby="tools-title">
+  <div class="container">
+    <h2 id="tools-title" class="section-title">Tools & Technologies</h2>
+    <p class="section-subtitle">
+      Key platforms and tools I've worked with in Cloud Security, Databases, and Linux environments.
+    </p>
+    <ul class="skills-list">
+      <li>⚡ Troubleshooting TLS issues, certificate rotations, and SSO integrations (Okta, Microsoft Entra ID) with MongoDB Atlas.</li>
+      <li>⚡ Designing encryption-at-rest strategies using AWS KMS and Azure Key Vault.</li>
+      <li>⚡ Hardening Linux servers and MongoDB Atlas clusters for production security.</li>
+    </ul>
+    <div class="icon-grid">
+      <i class="fab fa-aws" title="AWS"></i>
+      <i class="fab fa-microsoft" title="Azure"></i>
+      <i class="fab fa-linux" title="Linux"></i>
+      <i class="fas fa-database" title="MongoDB"></i>
+      <i class="fas fa-terminal" title="Bash"></i>
+      <i class="fas fa-lock" title="Okta"></i>
+      <i class="fas fa-user-shield" title="Microsoft Entra ID"></i>
+      <i class="fas fa-shield-alt" title="TLS/SSL"></i>
+      <i class="fab fa-docker" title="Docker"></i>
+    </div>
+  </div>
+</section>
+      </div>
+
+      <!-- Right column (compact contact / quick links) -->
+      <aside>
+        <div class="card profile-compact" aria-labelledby="contact-title">
+          <h2 id="contact-title" class="section-title">Contact</h2>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <div style="flex:1">
+                <div style="font-size:0.95rem;font-weight:700">Email</div>
+                <a href="mailto:mrlinux250507@gmail.com">mrlinux250507@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div style="flex:1">
+                <div style="font-size:0.95rem;font-weight:700">LinkedIn</div>
+                <a href="https://www.linkedin.com/in/moumita-roy23" target="_blank" rel="noopener">linkedin.com/in/moumita-roy23</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div style="flex:1">
+                <div style="font-size:0.95rem;font-weight:700">GitHub</div>
+                <a href="https://github.com/moumita-royIO" target="_blank" rel="noopener">github.com/moumita-royIO</a>
+              </div>
+            </div>
+
+            <div style="height:8px"></div>
+
+            <div style="text-align:center">
+              <a class="btn-primary" href="resume.pdf" target="_blank" rel="noopener">📄 Download Resume</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <footer>
+      <small>© <span id="year"></span> Moumita Roy — Cloud Security Portfolio</small>
+    </footer>
+  </main>
+
+  <script>
+    // small accessibility helpers
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
