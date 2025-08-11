@@ -51,6 +51,7 @@ This portfolio:
 - **Scalability** – Can handle large traffic without extra configuration  
 - **Cost Effective** – Pay only for what you use  
 - **HTTPS by Default** – Protects data in transit
+- AWS Shield Standard is automatically enabled by default for all Amazon CloudFront distributions and Route 53 hosted zones, providing L3/L4 (network and transport layer) DDoS protection without requiring manual configuration or extra cost. Learn how the shield behaves [here](https://docs.aws.amazon.com/waf/latest/developerguide/ddos-overview.html).
 
 ---
 
